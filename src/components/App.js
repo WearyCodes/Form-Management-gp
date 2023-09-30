@@ -13,6 +13,7 @@ const initialFormValues = {
 }
 
 export default function App() {
+  const [checked, setChecked] = useState(false)
   const [friends, setFriends] = useState([]) // careful what you initialize your state to
 const [formError, setFormError] = useState('')
   // 🔥 STEP 1 - WE NEED STATE TO HOLD ALL VALUES OF THE FORM!

@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { useState } from 'react'
 export default function FriendForm(props) {
   // THESE ARE THE **EXACT PROPS** FriendForm EXPECTS!!!
   const { values, update, submit } = props
-
+const [checked, setChecked] = useState(false)
   const onChange = evt => {
     // 🔥 STEP 6 - IMPLEMENT the change handler for our inputs and dropdown
     // a) pull the name of the input from the event object
@@ -65,8 +65,13 @@ export default function FriendForm(props) {
               <option value="Alumni">Alumni</option>
           </select>
 
+
+              
           {/* 🔥 STEP 5 - Make dropdown for role. */}
         </label>
+              <label>Checked</label>
+              <input type="checkbox" onChange={() => {setChecked(!checked)}}></input>
+
 
         <div className='submit'>
           <button>submit</button>
